@@ -33,7 +33,7 @@ const LoginForm = () => {
           <input
             type="text"
             id="username"
-            placeholder="Name: Admin"
+            placeholder="Name: admin"
             value={enteredName}
             onChange={(e) => setEnteredName(e.target.value)}
             required

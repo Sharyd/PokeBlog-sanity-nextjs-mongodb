@@ -15,7 +15,7 @@ const Admin = ({ messages }) => {
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
   let admin = false;
-  if (myCookie.token !== process.env.TOKEN) {
+  if (myCookie.token !== process.env.NEXT_PUBLIC_TOKEN) {
     return {
       redirect: {
         destination: "/admin/login",
@@ -23,7 +23,7 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-  if (myCookie.token === process.env.TOKEN) {
+  if (myCookie.token === process.env.NEXT_PUBLIC_TOKEN) {
     admin = true;
   }
 

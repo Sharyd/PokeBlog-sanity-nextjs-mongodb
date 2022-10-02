@@ -13,7 +13,7 @@ const Login = ({ admin }) => {
 export async function getServerSideProps(ctx) {
   const myCookie = ctx.req?.cookies || "";
   let admin = null;
-  if (myCookie.token === process.env.TOKEN) {
+  if (myCookie.token === process.env.NEXT_PUBLIC_TOKEN) {
     admin = true;
   }
 
