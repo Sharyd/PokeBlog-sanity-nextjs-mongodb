@@ -5,10 +5,6 @@ const nextConfig = {
   images: {
     domains: ["raw.githubusercontent.com", "cdn.sanity.io"],
   },
-  extends: [
-    //...
-    "plugin:@next/next/recommended",
-  ],
 };
 
 module.exports = nextConfig;
