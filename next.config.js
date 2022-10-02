@@ -27,10 +27,10 @@ module.exports = (phase) => {
 
   return {
     env: {
-      mongodb_username: "Dan",
-      mongodb_password: "lollol7",
-      mongodb_clustername: "cluster0",
-      mongodb_database: "my-poke-blog",
+      MONGODB_USERNAME: "Dan",
+      MONGODB_PASSWORD: "lollol7",
+      MONGODB_CLUSTERNAME: "cluster0",
+      MONGODB_DATABASE: "my-poke-blog",
       // ADMIN_USERNAME: "admin",
       // ADMIN_PASSWORD: "123456",
       // TOKEN: "SWdw4CV||663Z{p3|ZXtP%0k6Ejj;F",
