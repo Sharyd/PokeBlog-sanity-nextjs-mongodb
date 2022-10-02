@@ -1,0 +1,97 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+.prompt {
+  position: fixed;
+
+  max-width: 50vh;
+
+  background-color: #fff;
+  z-index: 100;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  animation: show 300ms ease-in forwards;
+  text-align: center;
+}
+.prompt h3 {
+  font-size: 2rem;
+}
+
+.content {
+  display: flex;
+  gap: 2.5rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+.content p {
+  padding: 1.5rem 3rem;
+  border-radius: 15px;
+}
+
+.content p:first-child {
+  background-color: rgb(212, 127, 127);
+}
+
+.content p:last-child {
+  background-color: rgb(123, 236, 113);
+}
+
+.cross {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  right: -97.5%;
+
+  font-size: 2.5rem;
+  transform: rotate(45deg);
+  color: rgba(9, 97, 121, 1);
+  cursor: pointer;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .modal {
+    left: 25vw;
+  }
+}
+@media only screen and (max-width: 55em) {
+  .modal {
+    left: 5vw;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .modal {
+    left: 0;
+    margin: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 45em) {
+  .modal {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .modal {
+    top: 9vh;
+  }
+}

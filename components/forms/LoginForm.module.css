@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  flex-direction: column;
+}
+.form {
+  margin-top: 7rem;
+  background-color: var(--background-card);
+  border-radius: 15px;
+  padding: 2rem 4rem;
+  animation: cartSliding 0.4s linear;
+}
+
+@keyframes cartSliding {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.control {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+  color: var(--main-color);
+}
+.control label {
+  margin: 1rem 1rem 1rem 0rem;
+}
+.control input {
+  font-size: 2rem;
+  min-width: 35rem;
+  padding: 1rem 1rem 1rem 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+.control input::placeholder {
+  font-size: 1.6rem;
+}
+
+.action {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.action button {
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.action button:hover {
+  background-color: var(--background-card);
+}
+
+.control *:focus,
+.action *:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 0.2rem rgba(155, 153, 153, 0.8);
+}
+.error {
+  color: var(--color-error-500);
+  font-size: 1.5rem;
+}

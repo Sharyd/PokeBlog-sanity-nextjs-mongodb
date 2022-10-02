@@ -1,0 +1,50 @@
+.container {
+  max-height: 100%;
+  margin-top: 22rem;
+
+  display: flex;
+  flex-direction: column;
+  width: 45rem;
+  align-self: center;
+  justify-content: center;
+  animation: cartSliding 0.4s ease-out;
+}
+
+@keyframes cartSliding {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.content {
+  cursor: pointer;
+  background-color: aqua;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 35rem;
+
+  border-radius: 20px;
+}
+.containerImg {
+  width: 30rem;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 35em) {
+  .container {
+    width: 40rem;
+  }
+}

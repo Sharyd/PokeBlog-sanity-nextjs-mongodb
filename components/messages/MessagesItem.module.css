@@ -1,0 +1,52 @@
+.container {
+  font-size: 1.4rem;
+  background-color: var(--background-card);
+  padding: 1rem;
+  border-bottom: 1px solid #000;
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+.container:last-child {
+  border: none;
+}
+.user {
+  padding-left: 2rem;
+}
+.user p {
+  background-color: var(--background-card);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+}
+
+.messageContainer {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  min-height: 10rem;
+  width: 120rem;
+}
+
+.message {
+  align-self: flex-start;
+  display: flex;
+  line-height: 1.4;
+}
+.name {
+  margin-bottom: 2rem;
+  background-color: var(--background-card);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+
+  margin-left: auto;
+}
+.delete {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transform: rotate(-45deg);
+  font-size: 2.5rem;
+  cursor: pointer;
+}

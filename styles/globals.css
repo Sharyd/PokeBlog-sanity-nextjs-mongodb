@@ -1,0 +1,95 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* rem 10px */
+  font-size: 62.5%;
+  background: var(--background-for-gradient);
+  background: var(--gradient-main-color);
+}
+
+@media only screen and (max-width: 90em) {
+  html {
+    font-size: 58.5%;
+  }
+}
+
+@media only screen and (max-width: 76.5em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 62em) {
+  html {
+    font-size: 52.5%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  html {
+    font-size: 47.5%;
+  }
+}
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 43.5%;
+  }
+}
+
+#__next {
+  height: 100%;
+}
+
+:root {
+  --main-color: #202020;
+  --main-color-hover: #181818;
+  --second-color: rgba(221, 221, 221);
+
+  --color-grey-100: hsl(265, 7%, 70%);
+  --color-grey-200: hsl(276, 5%, 20%);
+
+  --hoover-color: #3b3b3b;
+  --hoover-inner-color: #fff;
+
+  --button-remove: rgb(184, 12, 12);
+
+  --color-success-500: #12bd4b;
+  --color-error-500: #a10c4a;
+
+  --contact-inputs-color: rgba(0, 0, 0, 0.901);
+  --background-card: rgba(255, 255, 255, 0.301);
+
+  --background-for-gradient: rgb(255, 111, 0);
+  --gradient-main-color: linear-gradient(
+    90deg,
+    rgba(255, 111, 0, 1) 0%,
+    rgba(231, 240, 7, 1) 100%
+  );
+  --background-for-gradient-2: rgb(31, 31, 31);
+  --gradient-main-color-2: linear-gradient(
+    90deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(104, 107, 4, 0.863) 100%
+  );
+  --transition-set: all 0.2s linear;
+}

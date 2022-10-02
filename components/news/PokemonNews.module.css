@@ -1,0 +1,32 @@
+.newsContainer {
+  min-height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 10rem;
+}
+
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 62em) {
+  .newsContainer {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .newsContainer {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  .newsContainer {
+    width: 92.5%;
+  }
+}

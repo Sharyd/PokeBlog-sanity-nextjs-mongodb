@@ -1,0 +1,57 @@
+.notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-grey-100);
+  background-color: var(--color-grey-200);
+  padding: 0 4rem;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+
+  height: 5rem;
+  bottom: 0;
+  max-width: 100%;
+  left: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  animation: notificationSlide 0.4s linear;
+}
+
+.notification h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.notification p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.success {
+  background-color: var(--color-success-500);
+  color: var(--color-grey-800);
+}
+
+.error {
+  background-color: var(--color-error-500);
+}
+
+@keyframes notificationSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 280px) {
+  .notification {
+    width: 45rem;
+    left: calc(50% - 22.5rem);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+}

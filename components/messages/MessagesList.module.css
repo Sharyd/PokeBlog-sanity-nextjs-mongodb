@@ -1,0 +1,67 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
+  flex-direction: column;
+}
+
+.section ul {
+  margin-top: 5rem;
+  height: 60rem;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  align-self: center;
+}
+
+.container h3 {
+  align-self: flex-start;
+  font-size: 1.8rem;
+  margin-left: 4rem;
+}
+
+.removeAll {
+  padding: 1rem 2rem;
+  outline: none;
+  font-size: 1.8rem;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(212, 127, 127);
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s;
+  transform: translateY(-130%);
+  opacity: 0;
+  pointer-events: none;
+}
+.removeAll:hover {
+  background-color: rgb(218, 144, 144);
+}
+.container:hover .removeAll {
+  transform: translateY(0%);
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.noItem {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(202, 54, 43);
+  font-size: 2rem;
+  width: 30rem;
+
+  border-radius: 15px;
+  padding: 1rem 2rem;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

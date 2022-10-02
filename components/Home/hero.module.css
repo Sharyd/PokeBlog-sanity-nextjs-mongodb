@@ -1,0 +1,46 @@
+.section {
+  height: 100vh;
+  background: var(--background-for-gradient);
+  background: var(--gradient-main-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.imgContainer {
+  display: block;
+
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
+  margin-top: 7rem;
+  animation: imgSliding 0.8s linear;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@keyframes imgSliding {
+  0% {
+    transform: translateY(-25%);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8.5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 62em) {
+  .textContainer {
+    margin-top: 10rem;
+  }
+  .imgContainer {
+    margin-top: 20rem;
+  }
+}

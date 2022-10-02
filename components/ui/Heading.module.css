@@ -1,0 +1,29 @@
+.heading {
+  font-size: 3.5rem;
+  margin-top: 5rem;
+  position: relative;
+
+  width: max-content;
+}
+.heading::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  box-shadow: 0 50px 10px solid var(--main-color);
+  background-color: var(--main-color);
+  animation: slideHeading 0.4s linear;
+}
+
+@keyframes slideHeading {
+  0% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

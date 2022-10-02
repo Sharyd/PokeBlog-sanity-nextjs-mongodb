@@ -1,0 +1,112 @@
+.container {
+  margin-top: 20rem;
+  margin-left: 2.5rem;
+  background-color: var(--background-card);
+  padding: 4rem 2.5rem;
+  border-radius: 15px;
+  height: 42.5rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: containerSliding 0.5s linear;
+  position: relative;
+}
+
+.heart {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@keyframes containerSliding {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contentMain {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contentMain h1 {
+  font-size: 2rem;
+  align-self: center;
+  margin-bottom: 3rem;
+}
+.contentMain h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.89);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  color: var(--second-color);
+}
+
+.img {
+  width: 30rem;
+  text-align: center;
+}
+.img img {
+  height: 15rem;
+}
+
+.statsHeading {
+  text-align: center;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.content {
+  background: var(--background-for-gradient-2);
+  background: var(--gradient-main-color-2);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  color: var(--second-color);
+}
+.content p {
+  font-size: 1.5rem;
+}
+.removeContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.removeButton {
+  outline: none;
+  border: none;
+  background-color: var(--button-remove);
+  padding: 1rem 2rem;
+  border-radius: 0px 15px 0px 15px;
+  color: var(--second-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  animation: opacityButton 0.5s linear;
+}
+
+@keyframes opacityButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 35em) {
+  .container {
+    padding: 0 2rem 0 0;
+  }
+}
