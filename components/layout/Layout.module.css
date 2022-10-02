@@ -1,6 +1,7 @@
 .main {
   width: 100%;
   min-height: 120rem;
+
   background: var(--background-for-gradient);
   background: var(--gradient-main-color);
 }

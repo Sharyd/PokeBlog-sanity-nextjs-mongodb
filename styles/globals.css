@@ -4,6 +4,10 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+body {
+  background: var(--background-for-gradient);
+  background: var(--gradient-main-color);
+}
 
 a {
   color: inherit;
@@ -17,8 +21,6 @@ a {
 html {
   /* rem 10px */
   font-size: 62.5%;
-  background: var(--background-for-gradient);
-  background: var(--gradient-main-color);
 }
 
 @media only screen and (max-width: 90em) {
@@ -41,19 +43,19 @@ html {
 
 @media only screen and (max-width: 50em) {
   html {
-    font-size: 50%;
+    font-size: 46%;
   }
 }
 
 @media only screen and (max-width: 35em) {
   html {
-    font-size: 47.5%;
+    font-size: 43.5%;
   }
 }
 
 @media only screen and (max-width: 25em) {
   html {
-    font-size: 33.5%;
+    font-size: 30.5%;
   }
 }
 
