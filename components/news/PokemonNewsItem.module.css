@@ -122,3 +122,9 @@ a .icon:active {
     transform: scale(1);
   }
 }
+
+@media only screen and (max-width: 25em) {
+  .iconContainer span {
+    display: none;
+  }
+}

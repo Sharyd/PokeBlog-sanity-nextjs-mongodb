@@ -126,3 +126,17 @@
     width: max-content;
   }
 }
+
+@media only screen and (max-width: 35em) {
+  .menuIcon {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .menuIcon {
+    height: 4rem;
+    width: 4rem;
+  }
+}
