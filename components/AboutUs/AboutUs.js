@@ -3,7 +3,7 @@ import classes from "./aboutUs.module.css";
 import Heading from "../ui/Heading";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../ui/button";
+import Button from "../ui/Button";
 
 const AboutUs = () => {
   return (

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import MessagesItem from "./MessagesItem";
 import classes from "./MessagesList.module.css";
 import Heading from "../ui/Heading";
-import Notification from "../ui/notification";
+import Notification from "../ui/Notification";
 import Prompt from "../ui/Prompt";
 import { useNotification } from "../../hooks/useNotification";
 const MessagesList = ({ messages }) => {

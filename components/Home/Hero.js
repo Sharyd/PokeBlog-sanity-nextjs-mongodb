@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./hero.module.css";
 import Heading from "../ui/Heading";
-import Button from "../ui/button";
+import Button from "../ui/Button";
 import { useMediaQuery } from "react-responsive";
 const Hero = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
