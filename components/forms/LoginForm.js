@@ -33,7 +33,7 @@ const LoginForm = () => {
           <input
             type="text"
             id="username"
-            placeholder="Username"
+            placeholder="Name: Admin"
             value={enteredName}
             onChange={(e) => setEnteredName(e.target.value)}
             required
@@ -44,7 +44,7 @@ const LoginForm = () => {
           <input
             type="password"
             id="password"
-            placeholder="Password"
+            placeholder="Password: 123456"
             value={enteredPassword}
             onChange={(e) => setEnteredPassword(e.target.value)}
             required

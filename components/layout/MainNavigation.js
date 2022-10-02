@@ -93,6 +93,17 @@ const MainNavigation = () => {
                 </a>
               </Link>
             </li>
+            <li>
+              <Link href="/admin/login">
+                <a
+                  className={`${classes.link} ${
+                    router.pathname === "/admin/login" ? classes.active : ""
+                  }`}
+                >
+                  Admin
+                </a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
