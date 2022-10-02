@@ -57,10 +57,6 @@ html {
   }
 }
 
-#__next {
-  height: 100%;
-}
-
 :root {
   --main-color: #202020;
   --main-color-hover: #181818;
