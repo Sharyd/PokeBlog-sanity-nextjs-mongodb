@@ -4,10 +4,6 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-body {
-  background: var(--background-for-gradient);
-  background: var(--gradient-main-color);
-}
 
 a {
   color: inherit;
@@ -21,6 +17,8 @@ a {
 html {
   /* rem 10px */
   font-size: 62.5%;
+  background: var(--background-for-gradient);
+  background: var(--gradient-main-color);
 }
 
 @media only screen and (max-width: 90em) {
