@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./PokemonNews.module.css";
 import Heading from "../ui/Heading";
-import PokemonNewsItem from "./pokemonNewsItem";
+import PokemonNewsItem from "./PokemonNewsItem";
 const PokemonNews = ({ posts }) => {
   return (
     <>

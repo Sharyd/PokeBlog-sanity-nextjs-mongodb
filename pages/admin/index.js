@@ -2,7 +2,7 @@ import React from "react";
 
 import { fetchData } from "../../helpers/api-fetch";
 
-import MessagesList from "../../components/messages/messagesList";
+import MessagesList from "../../components/messages/MessagesList";
 
 const Admin = ({ messages }) => {
   return (

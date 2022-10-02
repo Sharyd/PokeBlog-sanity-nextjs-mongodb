@@ -1,4 +1,4 @@
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/Layout";
 import "../styles/globals.css";
 import { Provider } from "react-redux";
 import { HydrationProvider, Server, Client } from "react-hydration-provider";

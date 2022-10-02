@@ -1,4 +1,4 @@
-import AboutUs from "../../components/AboutUs/aboutUs";
+import AboutUs from "../../components/AboutUs/AboutUs";
 
 const AboutPokeBlogPage = () => {
   return <AboutUs />;
