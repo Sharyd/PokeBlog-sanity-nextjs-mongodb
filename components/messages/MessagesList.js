@@ -5,7 +5,9 @@ import classes from "./MessagesList.module.css";
 import Heading from "../ui/Heading";
 import Notification from "../ui/Notification";
 import Prompt from "../ui/Prompt";
+import { signOut } from "next-auth/client";
 import { useNotification } from "../../hooks/useNotification";
+
 const MessagesList = ({ messages }) => {
   const [message, setMessage] = useState(messages.messages);
   const [prompt, setPrompt] = useState(false);
@@ -63,6 +65,10 @@ const MessagesList = ({ messages }) => {
     setPrompt(false);
   };
 
+  const logoutHandler = () => {
+    signOut();
+  };
+
   return (
     <section className={classes.section}>
       <Heading>Welcome Admin</Heading>
@@ -71,8 +77,10 @@ const MessagesList = ({ messages }) => {
       )}
       {isNotMessage && <p className={classes.noItem}>No messages found!</p>}
       <div className={classes.container}>
-        {isMessage && <h3>Incoming messages</h3>}
-
+        <div className={classes.logoutContainer}>
+          {isMessage && <h3>Incoming messages</h3>}
+          <button onClick={logoutHandler}>Logout</button>
+        </div>
         <ul>
           {message.map((message) => (
             <MessagesItem

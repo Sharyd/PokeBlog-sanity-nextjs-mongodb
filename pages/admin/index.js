@@ -1,7 +1,7 @@
 import React from "react";
 
 import { fetchData } from "../../helpers/api-fetch";
-
+import { getSession } from "next-auth/client";
 import MessagesList from "../../components/messages/MessagesList";
 
 const Admin = ({ messages }) => {
@@ -12,9 +12,9 @@ const Admin = ({ messages }) => {
   );
 };
 
-export const getServerSideProps = async (ctx) => {
-  const myCookie = ctx.req?.cookies || "";
-  if (myCookie.token !== process.env.NEXT_PUBLIC_TOKEN) {
+export const getServerSideProps = async (context) => {
+  const session = await getSession({ req: context.req });
+  if (!session) {
     return {
       redirect: {
         destination: "/admin/login",

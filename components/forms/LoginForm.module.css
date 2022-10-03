@@ -38,7 +38,7 @@
 .control input {
   font-size: 2rem;
   min-width: 35rem;
-  padding: 1rem 1rem 1rem 0.5rem;
+  padding: 1rem;
   outline: none;
   border: none;
   border-radius: 15px;
@@ -77,4 +77,12 @@
 .error {
   color: var(--color-error-500);
   font-size: 1.5rem;
+}
+
+.toggle {
+  outline: none;
+  margin-top: 1rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.15rem 1.5rem;
 }

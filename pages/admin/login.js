@@ -1,27 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LoginForm from "../../components/forms/LoginForm";
+import { getSession } from "next-auth/client";
+
 import { useRouter } from "next/router";
-const Login = ({ admin }) => {
+const Login = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
-  if (admin) {
-    router.replace("/admin");
+  useEffect(() => {
+    getSession().then((session) => {
+      if (session) {
+        router.replace("/admin");
+      } else {
+        setIsLoading(false);
+      }
+    });
+  }, [router]);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
   }
 
-  return <>{!admin && <LoginForm />}</>;
+  return <LoginForm />;
 };
-
-export async function getServerSideProps(ctx) {
-  const myCookie = ctx.req?.cookies || "";
-  let admin = null;
-  if (myCookie.token === process.env.NEXT_PUBLIC_TOKEN) {
-    admin = true;
-  }
-
-  return {
-    props: {
-      admin: admin,
-    },
-  };
-}
 
 export default Login;

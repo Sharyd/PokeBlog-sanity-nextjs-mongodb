@@ -19,6 +19,7 @@ export async function getAllDocuments(client, collection, id) {
   const documents = await db.collection(collection).find().toArray();
   return documents;
 }
+
 export async function deleteDocument(client, collection, id) {
   const db = client.db();
 

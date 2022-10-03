@@ -4,8 +4,10 @@ import { useRouter } from "next/router";
 import Logo from "./Logo";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
+import { useSession } from "next-auth/client";
 const MainNavigation = () => {
   const [nav, setNav] = useState(false);
+  const [session, loading] = useSession();
   const router = useRouter();
 
   const handleNav = () => {
@@ -93,17 +95,32 @@ const MainNavigation = () => {
                 </a>
               </Link>
             </li>
-            <li>
-              <Link href="/admin/login">
-                <a
-                  className={`${classes.link} ${
-                    router.pathname === "/admin/login" ? classes.active : ""
-                  }`}
-                >
-                  Admin
-                </a>
-              </Link>
-            </li>
+            {!session && (
+              <li>
+                <Link href="/admin/login">
+                  <a
+                    className={`${classes.link} ${
+                      router.pathname === "/admin/login" ? classes.active : ""
+                    }`}
+                  >
+                    Login
+                  </a>
+                </Link>
+              </li>
+            )}
+            {session && (
+              <li>
+                <Link href="/admin">
+                  <a
+                    className={`${classes.link} ${
+                      router.pathname === "/admin" ? classes.active : ""
+                    }`}
+                  >
+                    Admin
+                  </a>
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
       </header>

@@ -21,9 +21,9 @@ const AboutUs = () => {
       <div className={classes.containerText}>
         <Heading>Everything about us</Heading>
         <p>
-          We are Pokeblog web. Our specialization is about pokemons and pokemon
-          cards.You can learn some cool information about pokemons and see how
-          to look unique cards in virtual world.
+          We are Pokeblog web. <br /> Our specialization is about pokemons and
+          pokemon cards.You can learn some cool information about pokemons and
+          see how to look unique cards in virtual world.
         </p>
         <div className={classes.buttonContainer}>
           <Link href={"/PokeCards"} passHref>

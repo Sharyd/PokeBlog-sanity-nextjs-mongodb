@@ -96,18 +96,27 @@
     padding: 1.25rem 2.5rem;
   }
   .control input {
-    width: 20rem;
+    max-width: 20rem;
   }
   .control textarea {
-    width: 45rem;
+    max-width: 45rem;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .control input {
+    max-width: 18.5rem;
+  }
+  .control textarea {
+    max-width: 40rem;
   }
 }
 
 @media only screen and (max-width: 25em) {
   .control input {
-    width: 18.5rem;
+    max-width: 16.5rem;
   }
   .control textarea {
-    width: 40rem;
+    max-width: 35rem;
   }
 }

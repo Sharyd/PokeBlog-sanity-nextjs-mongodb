@@ -71,63 +71,61 @@ const PokeCardsDetail = (props) => {
   }, [favourite]);
 
   return (
-    <>
-      <article className={classes.section}>
-        <div className={classes.headingContainer}>
-          <Heading>Welcome to poke detail card</Heading>
-        </div>
-        <div className={classes.container} style={{ backgroundColor: color }}>
-          <span className={classes.heart}>
+    <article className={classes.section}>
+      <div className={classes.headingContainer}>
+        <Heading>Welcome to poke detail card</Heading>
+      </div>
+      <div className={classes.container} style={{ backgroundColor: color }}>
+        <span className={classes.heart}>
+          <HiHeart
+            className={setClassFavourite}
+            onClick={() => {
+              addFavouriteItem();
+              addHandlerFavourite();
+              removeFavouriteItem();
+            }}
+          />
+          {animatedHeart && (
             <HiHeart
-              className={setClassFavourite}
-              onClick={() => {
-                addFavouriteItem();
-                addHandlerFavourite();
-                removeFavouriteItem();
-              }}
+              className={`${classes.iconHeart} ${classes.animatedHeart}`}
+              style={favourite && { color: "rgb(184, 3, 3)" }}
             />
-            {animatedHeart && (
-              <HiHeart
-                className={`${classes.iconHeart} ${classes.animatedHeart}`}
-                style={favourite && { color: "rgb(184, 3, 3)" }}
-              />
-            )}
-          </span>
+          )}
+        </span>
 
-          <div className={classes.contentMain}>
-            <h1>{toUpFirst(name)}</h1>
-            <h2>{type}</h2>
-            <div className={classes.img}>
-              <Image
-                loader={() => image}
-                src={image}
-                alt={name}
-                width={400}
-                height={300}
-              />
-            </div>
-          </div>
-          <div className={classes.content}>
-            <p className={classes.statsHeading}>Stats</p>
-            <p>height: {height}</p>
-            <p>weight: {weight}</p>
-            <p>
-              {createOwnHp > 400
-                ? `high HP: ${createOwnHp}`
-                : `low HP: ${createOwnHp}`}
-            </p>
-
-            <div>
-              {removeHPstat.map((stat, i) => (
-                <p key={i}>
-                  {stat.stat.name}: {stat.base_stat}
-                </p>
-              ))}
-            </div>
+        <div className={classes.contentMain}>
+          <h1>{toUpFirst(name)}</h1>
+          <h2>{type}</h2>
+          <div className={classes.img}>
+            <Image
+              loader={() => image}
+              src={image}
+              alt={name}
+              width={400}
+              height={300}
+            />
           </div>
         </div>
-      </article>
-    </>
+        <div className={classes.content}>
+          <p className={classes.statsHeading}>Stats</p>
+          <p>height: {height}</p>
+          <p>weight: {weight}</p>
+          <p>
+            {createOwnHp > 400
+              ? `high HP: ${createOwnHp}`
+              : `low HP: ${createOwnHp}`}
+          </p>
+
+          <div>
+            {removeHPstat.map((stat, i) => (
+              <p key={i}>
+                {stat.stat.name}: {stat.base_stat}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </article>
   );
 };
 

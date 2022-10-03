@@ -5,7 +5,7 @@
 }
 .search {
   height: 7rem;
-  width: 100%;
+  max-width: 100%;
   font-size: 1.6rem;
   font-weight: 600;
   display: flex;
