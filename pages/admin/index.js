@@ -13,15 +13,15 @@ const Admin = ({ messages }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const session = await getSession({ req: context.req });
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
+  // const session = await getSession({ req: context.req });
+  // if (!session) {
+  //   return {
+  //     redirect: {
+  //       destination: "/login",
+  //       permanent: false,
+  //     },
+  //   };
+  // }
 
   const messages = await fetchData(`http://localhost:3000/api/contactHandler`);
 

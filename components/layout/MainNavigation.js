@@ -95,7 +95,7 @@ const MainNavigation = () => {
                 </a>
               </Link>
             </li>
-            {session ? (
+            {/* {session ? (
               <li>
                 <Link href="/admin">
                   <a
@@ -119,7 +119,18 @@ const MainNavigation = () => {
                   </a>
                 </Link>
               </li>
-            )}
+            )} */}
+            <li>
+              <Link href="/admin">
+                <a
+                  className={`${classes.link} ${
+                    router.pathname === "/admin" ? classes.active : ""
+                  }`}
+                >
+                  Admin
+                </a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>

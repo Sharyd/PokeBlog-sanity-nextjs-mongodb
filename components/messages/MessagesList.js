@@ -65,9 +65,9 @@ const MessagesList = ({ messages }) => {
     setPrompt(false);
   };
 
-  const logoutHandler = () => {
-    signOut();
-  };
+  // const logoutHandler = () => {
+  //   signOut();
+  // };
 
   return (
     <section className={classes.section}>
@@ -79,7 +79,7 @@ const MessagesList = ({ messages }) => {
       <div className={classes.container}>
         <div className={classes.logoutContainer}>
           {isMessage && <h3>Incoming messages</h3>}
-          <button onClick={logoutHandler}>Logout</button>
+          {/* <button onClick={logoutHandler}>Logout</button> */}
         </div>
         <ul>
           {message.map((message) => (
