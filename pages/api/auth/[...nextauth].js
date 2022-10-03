@@ -10,11 +10,25 @@ export default NextAuth({
   providers: [
     Providers.Credentials({
       async authorize(credentials) {
-        const client = await connectDatabase();
+        let client;
+        try {
+          client = await connectDatabase();
+        } catch (err) {
+          res
+            .status(500)
+            .json({ message: "Connection to the database failed!" });
+          return;
+        }
 
-        const user = await client.db().collection("users").findOne({
-          email: credentials.email,
-        });
+        let user;
+        try {
+          user = await client.db().collection("users").findOne({
+            email: credentials.email,
+          });
+        } catch (err) {
+          res.status(500).json({ message: "Getting user failed!" });
+          return;
+        }
 
         if (!user) {
           throw new Error("No user found!");
