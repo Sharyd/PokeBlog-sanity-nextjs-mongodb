@@ -10,25 +10,11 @@ export default NextAuth({
   providers: [
     Providers.Credentials({
       async authorize(credentials) {
-        let client;
-        try {
-          client = await connectDatabase();
-        } catch (err) {
-          res
-            .status(500)
-            .json({ message: "Connection to the database failed!" });
-          return;
-        }
+        const client = await connectDatabase();
 
-        let user;
-        try {
-          user = await client.db().collection("users").findOne({
-            email: credentials.email,
-          });
-        } catch (err) {
-          res.status(500).json({ message: "Getting user failed!" });
-          return;
-        }
+        const user = await client.db().collection("users").findOne({
+          email: credentials.email,
+        });
 
         if (!user) {
           throw new Error("No user found!");
@@ -41,7 +27,7 @@ export default NextAuth({
 
         if (!isValid) {
           client.close();
-          throw new Error("Could not log you in! Wrong password");
+          throw new Error("Could not log you in! Wrong Password");
         }
         client.close();
         return { email: user.email };

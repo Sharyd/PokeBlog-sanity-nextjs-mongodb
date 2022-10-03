@@ -95,20 +95,7 @@ const MainNavigation = () => {
                 </a>
               </Link>
             </li>
-            {!session && (
-              <li>
-                <Link href="/admin/login">
-                  <a
-                    className={`${classes.link} ${
-                      router.pathname === "/admin/login" ? classes.active : ""
-                    }`}
-                  >
-                    Login
-                  </a>
-                </Link>
-              </li>
-            )}
-            {session && (
+            {session ? (
               <li>
                 <Link href="/admin">
                   <a
@@ -117,6 +104,18 @@ const MainNavigation = () => {
                     }`}
                   >
                     Admin
+                  </a>
+                </Link>
+              </li>
+            ) : (
+              <li>
+                <Link href="/admin/login">
+                  <a
+                    className={`${classes.link} ${
+                      router.pathname === "/admin/login" ? classes.active : ""
+                    }`}
+                  >
+                    Login
                   </a>
                 </Link>
               </li>
