@@ -109,10 +109,10 @@ const MainNavigation = () => {
               </li>
             ) : (
               <li>
-                <Link href="/admin/login">
+                <Link href="/login">
                   <a
                     className={`${classes.link} ${
-                      router.pathname === "/admin/login" ? classes.active : ""
+                      router.pathname === "/login" ? classes.active : ""
                     }`}
                   >
                     Login
