@@ -23,7 +23,12 @@ export const getServerSideProps = async (context) => {
   //   };
   // }
 
-  const messages = await fetchData(`http://localhost:3000/api/contactHandler`);
+  let messages;
+  try {
+    messages = await fetchData(`http://localhost:3000/api/contactHandler`);
+  } catch (err) {
+    console.log(err);
+  }
 
   return {
     props: {

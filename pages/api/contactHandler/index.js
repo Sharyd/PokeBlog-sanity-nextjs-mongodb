@@ -6,7 +6,6 @@ import {
 } from "../../../helpers/db-util";
 const handler = async (req, res) => {
   const { method, cookies, body } = req;
-  const token = cookies.token;
   let client;
 
   try {
