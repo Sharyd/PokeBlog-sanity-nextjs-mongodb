@@ -26,9 +26,10 @@ export const getServerSideProps = async (context) => {
 
   let messages;
   try {
-    messages = await axios.get(
+    const res = await axios.get(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/contactHandler`
     );
+    messages = res.data;
   } catch (err) {
     console.log(err);
   }
