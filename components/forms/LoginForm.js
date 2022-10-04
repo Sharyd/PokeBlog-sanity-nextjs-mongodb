@@ -4,22 +4,18 @@ import { signIn } from "next-auth/client";
 import { useRouter } from "next/router";
 import classes from "./LoginForm.module.css";
 import Heading from "../ui/Heading";
+import axios from "axios";
 
 async function createUser(email, password) {
-  const res = await fetch("/api/auth/signup", {
-    method: "POST",
-    body: JSON.stringify({ email, password }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  const data = await res.json();
-
-  if (!res.ok) {
-    throw new Error(data.message || "Something went wrong");
+  try {
+    const res = await axios.post(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/signup`,
+      { email, password }
+    );
+    return res.data;
+  } catch (err) {
+    console.log(err);
   }
-  return data;
 }
 
 const LoginForm = () => {
