@@ -17,7 +17,7 @@ const Login = () => {
   }, [router]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return "Loading...";
   }
 
   return <LoginForm />;

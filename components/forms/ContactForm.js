@@ -3,7 +3,7 @@ import { useState } from "react";
 import classes from "./ContactForm.module.css";
 import Heading from "../ui/Heading";
 import Notification from "../ui/Notification";
-import { sendData } from "../../helpers/api-fetch";
+import axios from "axios";
 import { useNotification } from "../../hooks/useNotification";
 const ContactForm = () => {
   const [enteredName, setEnteredName] = useState("");
@@ -12,7 +12,7 @@ const ContactForm = () => {
 
   const { setRequestStatus, notification, setError } = useNotification();
 
-  const setLineBreakMessage = enteredMessage.replace(/(.{170})/g, "$1\n");
+  const setLineBreakMessage = enteredMessage.replace(/(.{150})/g, "$1\n");
   console.log(setLineBreakMessage);
 
   const sendMessageForm = async (e) => {
@@ -21,7 +21,7 @@ const ContactForm = () => {
     setRequestStatus("pending");
 
     try {
-      await sendData("/api/contactHandler", {
+      await axios.post("/api/contactHandler", {
         name: enteredName,
         email: enteredEmail,
         message: setLineBreakMessage,

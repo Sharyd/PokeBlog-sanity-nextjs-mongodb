@@ -123,7 +123,10 @@ a .icon:active {
   }
 }
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 30em) {
+  .container {
+    padding: 1rem 2.75rem;
+  }
   .iconContainer span {
     display: none;
   }

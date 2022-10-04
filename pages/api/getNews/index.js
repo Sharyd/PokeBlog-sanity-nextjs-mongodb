@@ -4,7 +4,7 @@ import { sanityClient } from "../../../sanity";
 const query = groq`*[_type == "post"] {
   _id,
     ...
-  } | order(publishedAt asc)`;
+  } | order(publishedAt desc)`;
 
 export default async function handler(req, res) {
   try {
