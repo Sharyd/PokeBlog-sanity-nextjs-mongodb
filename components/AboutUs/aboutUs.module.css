@@ -10,7 +10,7 @@
 .imgContainer1 {
   margin-top: 12.5rem;
   max-width: 100%;
-  border-radius: px;
+  border-radius: 15px;
   align-self: center;
   animation: imgSliding 0.4s linear;
 }
