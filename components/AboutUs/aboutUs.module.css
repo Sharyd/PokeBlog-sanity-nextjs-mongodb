@@ -1,5 +1,5 @@
 .section {
-  max-width: 100%;
+  min-width: 100%;
   height: 100%;
   background: var(--background-for-gradient);
   background: var(--gradient-main-color);
@@ -79,9 +79,10 @@
     grid-column: 1/2;
     grid-row: 4/5;
     margin-top: auto;
+    margin-bottom: 15rem;
   }
   .imgContainer2 {
-    margin-top: 15rem;
+    margin-top: auto;
   }
   .buttonContainer {
     justify-content: center;
@@ -89,6 +90,9 @@
 }
 
 @media only screen and (max-width: 35em) {
+  .section {
+    height: 125rem;
+  }
   .containerText {
     max-width: 47.5rem;
   }

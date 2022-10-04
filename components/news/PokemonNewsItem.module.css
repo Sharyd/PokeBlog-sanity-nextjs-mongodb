@@ -10,6 +10,7 @@
   margin-bottom: 4rem;
   font-size: 1.8rem;
   margin-top: 10rem;
+  min-width: 55rem;
 }
 
 .header h3 {
@@ -124,10 +125,13 @@ a .icon:active {
 }
 
 @media only screen and (max-width: 30em) {
-  .container {
-    padding: 1rem 2.75rem;
-  }
   .iconContainer span {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .container {
+    min-width: 50rem;
   }
 }
