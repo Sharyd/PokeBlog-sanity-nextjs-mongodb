@@ -9,8 +9,9 @@ import axios from "axios";
 async function createUser(email, password) {
   try {
     const res = await axios.post(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/signup`,
-      { email, password }
+      `/api/auth/signup`,
+      { email, password },
+      { withCredentials: true }
     );
     return res.data;
   } catch (err) {
