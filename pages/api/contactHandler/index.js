@@ -5,7 +5,7 @@ import {
   deleteAllDocument,
 } from "../../../helpers/db-util";
 const handler = async (req, res) => {
-  const { method, cookies, body } = req;
+  const { method, body } = req;
   let client;
 
   try {

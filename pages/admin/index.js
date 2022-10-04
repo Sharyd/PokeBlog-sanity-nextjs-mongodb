@@ -25,7 +25,7 @@ export const getServerSideProps = async (context) => {
 
   let messages;
   try {
-    messages = await fetchData(`http://localhost:3000/api/contactHandler`);
+    messages = await fetchData(`/api/contactHandler`);
   } catch (err) {
     console.log(err);
   }
