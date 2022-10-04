@@ -9,15 +9,15 @@ const Admin = ({ messages }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const session = await getSession({ req: context.req });
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/admin/login",
-        permanent: false,
-      },
-    };
-  }
+  // const session = await getSession({ req: context.req });
+  // if (!session) {
+  //   return {
+  //     redirect: {
+  //       destination: "/admin/login",
+  //       permanent: false,
+  //     },
+  //   };
+  // }
 
   let messages;
   try {
