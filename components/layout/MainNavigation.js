@@ -95,7 +95,7 @@ const MainNavigation = () => {
                 </a>
               </Link>
             </li>
-            {/* {session ? (
+            {session ? (
               <li>
                 <Link href="/admin">
                   <a
@@ -119,8 +119,8 @@ const MainNavigation = () => {
                   </a>
                 </Link>
               </li>
-            )} */}
-            <li>
+            )}
+            {/* <li>
               <Link href="/admin">
                 <a
                   className={`${classes.link} ${
@@ -130,7 +130,7 @@ const MainNavigation = () => {
                   Admin
                 </a>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </header>

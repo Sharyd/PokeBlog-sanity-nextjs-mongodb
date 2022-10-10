@@ -65,22 +65,23 @@ const MessagesList = ({ messages }) => {
     setPrompt(false);
   };
 
-  // const logoutHandler = () => {
-  //   signOut();
-  // };
+  const logoutHandler = () => {
+    signOut();
+  };
 
   return (
     <section className={classes.section}>
-      <Heading>Welcome Admin</Heading>
+      <div className={classes.logoutContainer}>
+        <Heading>Welcome Admin</Heading>
+        <button onClick={logoutHandler}>Logout</button>
+      </div>
       {prompt && (
         <Prompt keepIt={handlePromptKeep} onRemoveAll={handleDeleteAll} />
       )}
       {isNotMessage && <p className={classes.noItem}>No messages found!</p>}
       <div className={classes.container}>
-        <div className={classes.logoutContainer}>
-          {isMessage && <h3>Incoming messages</h3>}
-          {/* <button onClick={logoutHandler}>Logout</button> */}
-        </div>
+        {isMessage && <h3>Incoming messages</h3>}
+
         <ul>
           {message.map((message) => (
             <MessagesItem

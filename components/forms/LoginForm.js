@@ -5,18 +5,7 @@ import { useRouter } from "next/router";
 import classes from "./LoginForm.module.css";
 import Heading from "../ui/Heading";
 import axios from "axios";
-
-async function createUser(email, password) {
-  try {
-    const res = await axios.post(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/signup`,
-      { email, password }
-    );
-    return res.data;
-  } catch (err) {
-    console.log(err);
-  }
-}
+import { useEffect } from "react";
 
 const LoginForm = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -24,6 +13,22 @@ const LoginForm = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState(false);
   const router = useRouter();
+
+  async function createUser(email, password) {
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/signup`,
+        { email, password }
+      );
+      return res.data;
+    } catch (err) {
+      setError(
+        err.message === "Request failed with status code 422"
+          ? "Password should be at least 7 char long."
+          : err.message || "Something went wrong"
+      );
+    }
+  }
 
   function switchAuthModeHandler() {
     setIsLogin((prevState) => !prevState);

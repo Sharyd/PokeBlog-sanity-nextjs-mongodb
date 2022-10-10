@@ -6,7 +6,7 @@
   background-color: var(--background-card);
   padding: 2rem 4rem;
   border-radius: 15px;
-  box-shadow: 6px 4px 2px rgba(0, 0, 0, 0.404);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
   font-size: 1.8rem;
   margin-top: 10rem;
@@ -130,8 +130,8 @@ a .icon:active {
   }
 }
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 27em) {
   .container {
-    min-width: 50rem;
+    width: 45rem;
   }
 }

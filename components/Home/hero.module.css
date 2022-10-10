@@ -9,7 +9,6 @@
 .imgContainer {
   display: block;
 
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.534);
   margin-top: 7rem;
   animation: imgSliding 0.8s linear;
 }

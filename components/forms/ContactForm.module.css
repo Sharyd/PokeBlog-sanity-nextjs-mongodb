@@ -95,9 +95,7 @@
   .contactSection {
     height: 100vh;
   }
-  .form {
-    padding: 1.25rem 2.5rem;
-  }
+
   .control input {
     max-width: 20rem;
   }
