@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import classes from "./PokeCards.module.css";
 import { useDebouncedEffect } from "../../hooks/useDebouncedEffect";
 import PokeCardsItem from "./PokeCardsItem";
@@ -11,9 +11,11 @@ const PokeCards = (props) => {
     setValue(e.target.value);
   };
 
-  const filteredPoke = pokemon.filter((poke) => {
-    return poke.name.toLowerCase().includes(debouncedValue);
-  });
+  const filteredPoke = useMemo(() => {
+    return pokemon.filter((poke) => {
+      return poke.name.toLowerCase().includes(debouncedValue.toLowerCase());
+    });
+  }, [debouncedValue, pokemon]);
 
   useDebouncedEffect(() => setDebouncedValue(value), [value], 300);
 
