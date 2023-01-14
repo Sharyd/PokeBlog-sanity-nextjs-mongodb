@@ -3,16 +3,11 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "./Logo";
 import { HiMenu } from "react-icons/hi";
-import { useState } from "react";
 import { useSession } from "next-auth/client";
-const MainNavigation = () => {
-  const [nav, setNav] = useState(false);
+const MainNavigation = ({handleNav, nav}) => {
+
   const [session, loading] = useSession();
   const router = useRouter();
-
-  const handleNav = () => {
-    setNav((prev) => !prev);
-  };
 
   const setNavigation = `${classes.header} ${nav && classes.activeNav}`;
   return (
@@ -120,17 +115,6 @@ const MainNavigation = () => {
                 </Link>
               </li>
             )}
-            {/* <li>
-              <Link href="/admin">
-                <a
-                  className={`${classes.link} ${
-                    router.pathname === "/admin" ? classes.active : ""
-                  }`}
-                >
-                  Admin
-                </a>
-              </Link>
-            </li> */}
           </ul>
         </nav>
       </header>

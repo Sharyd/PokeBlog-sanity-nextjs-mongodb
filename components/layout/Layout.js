@@ -3,11 +3,16 @@ import MainNavigation from "./MainNavigation";
 import classes from "./Layout.module.css";
 
 import Footer from "./Footer";
+import { useState } from "react";
 const Layout = (props) => {
+  const [nav, setNav] = useState(false);
+   const handleNav = () => {
+    setNav((prev) => !prev);
+  };
   return (
     <>
-      <MainNavigation />
-      <main className={classes.main}>{props.children}</main>
+      <MainNavigation handleNav={handleNav} nav={nav}/>
+      <main className={classes.main} onClick={() => handleNav(false)}>{props.children}</main>
       <Footer />
     </>
   );
