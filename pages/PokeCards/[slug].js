@@ -21,6 +21,7 @@ export async function getStaticProps(ctx) {
     props: {
       pokemon: pokemon,
     },
+    
   };
 }
 export async function getStaticPaths() {
@@ -33,6 +34,7 @@ export async function getStaticPaths() {
   return {
     paths: paths,
     fallback: false,
+    
   };
 }
 

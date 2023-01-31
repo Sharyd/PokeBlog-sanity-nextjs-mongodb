@@ -20,7 +20,13 @@ const News = ({ data }) => {
 export default News;
 
 export async function getServerSideProps(ctx) {
-  const data = await fetchNews();
+    let data;
+  try {
+    data = await fetchNews();
+    
+  } catch (error) {
+    console.log(error)
+  }
 
   return {
     props: {

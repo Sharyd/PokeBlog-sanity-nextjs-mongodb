@@ -5,7 +5,6 @@ import Logo from "./Logo";
 import { HiMenu } from "react-icons/hi";
 import { useSession } from "next-auth/client";
 const MainNavigation = ({handleNav, nav}) => {
-
   const [session, loading] = useSession();
   const router = useRouter();
 

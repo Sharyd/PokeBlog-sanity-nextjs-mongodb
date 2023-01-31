@@ -12,7 +12,7 @@ const Layout = (props) => {
   return (
     <>
       <MainNavigation handleNav={handleNav} nav={nav}/>
-      <main className={classes.main} onClick={() => handleNav(false)}>{props.children}</main>
+      <main className={classes.main} onClick={() => setNav(false)}>{props.children}</main>
       <Footer />
     </>
   );
